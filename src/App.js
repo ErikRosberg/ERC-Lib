@@ -4,15 +4,15 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element="#" />
-        <Route path="products" element="#" />
-        <Route path="contact" element="#" />
-        <Route path="about" element="#" />
-      </Routes>
-    </Router>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element="#" />
+          <Route path="products" element="#" />
+          <Route path="contact" element="#" />
+          <Route path="about" element="#" />
+        </Routes>
+      </Router>
   );
 }
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavbarContainer = styled.nav`
-  width: 100vh;
+  width: 100vw;
   height: 80px;
   background-color: lightcoral;
   display: flex;
@@ -28,7 +28,7 @@ export const NavbarLinkContainer = styled.div`
 `;
 
 export const NavbarInnerContainer = styled.div`
-  width: 100vh;
+  width: 100vw;
   height: 80px;
   display: flex;
 `;

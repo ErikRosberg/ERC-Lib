@@ -8,8 +8,8 @@ import {
   NavbarLinkContainer,
   NavbarLink,
   Logo,
-} from "../../styles/Navbar.style";
-import LogoImg from "../../assets/logo.png";
+} from "./Navbar.style";
+import LogoImg from "../../../assets/logo.png";
 
 function Navbar() {
   return (

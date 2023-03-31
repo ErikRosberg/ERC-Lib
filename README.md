@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Layout explainatíon
+
+-----components-----
+container: Contains components that are connected to the data layer of the application and manage state.
+presentation: Contains components that are used for presentation purposes only and are not connected to the data layer of the application.
+common: Contains components that are used throughout the application and are not specific to any one feature or page.
+features: Contains subfolders for each feature or page in the application. Each subfolder contains components that are specific to that feature or page.

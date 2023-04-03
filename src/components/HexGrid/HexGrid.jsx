@@ -1,5 +1,5 @@
 import React from "react";
-import { HexContainer, Hex, HexagonContent } from "./HexGrid.style";
+import { HexContainer, HexBorder, HexagonContent } from "./HexGrid.style";
 
 function HexGrid(className, Label) {
   return (
@@ -13,18 +13,24 @@ function HexGrid(className, Label) {
       }}
     >
       <HexContainer>
-        <Hex left={2} top={1} color="red">
+        <HexBorder
+          left={2}
+          top={1}
+          direction="right"
+          firstColor="white"
+          secondColor="red"
+        >
           <HexagonContent> Hexagon 1</HexagonContent>
-        </Hex>
-        <Hex left={1} top={2} color="green">
+        </HexBorder>
+        <HexBorder left={1} top={2} color="green">
           <HexagonContent> Hexagon 2</HexagonContent>
-        </Hex>
-        <Hex left={3} top={2} color="blue">
+        </HexBorder>
+        <HexBorder left={3} top={2} color="blue">
           <HexagonContent> Hexagon 3</HexagonContent>
-        </Hex>
-        <Hex left={2} top={3} color="yellow">
+        </HexBorder>
+        <HexBorder left={2} top={3} color="yellow">
           <HexagonContent> Hexagon 4</HexagonContent>
-        </Hex>
+        </HexBorder>
       </HexContainer>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   NavbarContainer,
   LeftContainer,
@@ -8,25 +8,37 @@ import {
   NavbarLinkContainer,
   NavbarLink,
   Logo,
+  OpenLinksButton,
+  NavbarLinkExtended,
 } from "./Navbar.style";
 import LogoImg from "../../../assets/logo.png";
 
 function Navbar() {
+  const [extendNavbar, setExtendNavbar] = useState(false);
   return (
-    <NavbarContainer>
+    <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInnerContainer>
         <LeftContainer>
           <NavbarLinkContainer>
             <NavbarLink to="/">Home</NavbarLink>
             <NavbarLink to="/contact">Contact</NavbarLink>
             <NavbarLink to="/about">About</NavbarLink>
+            <OpenLinksButton onClick={() => setExtendNavbar((curr) => !curr)}>
+              {extendNavbar ? <> &#10005;</> : <>&#8801;</>}
+            </OpenLinksButton>
           </NavbarLinkContainer>
         </LeftContainer>
         <RightContainer>
           <Logo src={LogoImg} alt="404" />
         </RightContainer>
       </NavbarInnerContainer>
-      <NavbarExtendedContainer></NavbarExtendedContainer>
+      {extendNavbar && (
+        <NavbarExtendedContainer>
+          <NavbarLinkExtended to="/">Home</NavbarLinkExtended>
+          <NavbarLinkExtended to="/contact">Contact</NavbarLinkExtended>
+          <NavbarLinkExtended to="/about">About</NavbarLinkExtended>
+        </NavbarExtendedContainer>
+      )}
     </NavbarContainer>
   );
 }

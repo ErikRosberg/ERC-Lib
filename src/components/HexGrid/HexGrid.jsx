@@ -1,5 +1,10 @@
 import React from "react";
-import { HexContainer, HexBorder, HexagonContent } from "./HexGrid.style";
+import {
+  HexGridContainer,
+  HexBorder,
+  HexContentContainer,
+  Dot,
+} from "./HexGrid.style";
 
 function HexGrid(className, Label) {
   return (
@@ -12,26 +17,64 @@ function HexGrid(className, Label) {
         justifyContent: "center",
       }}
     >
-      <HexContainer>
+      <HexGridContainer>
         <HexBorder
-          left={2}
           top={1}
-          direction="right"
+          left={2}
+          firstColor="red"
+          secondColor="yellow"
+          direction="to left"
+        >
+          <HexContentContainer>
+            <Dot color="blue" />
+            <h3>
+              Antal Kontrollpunkter <b>100</b>
+            </h3>
+          </HexContentContainer>
+        </HexBorder>
+        <HexBorder
+          top={2}
+          left={1}
           firstColor="white"
           secondColor="red"
+          direction="to left"
         >
-          <HexagonContent> Hexagon 1</HexagonContent>
+          <HexContentContainer>
+            <Dot color="red" />
+            <h3>
+              Antal Kontrollpunkter <b>100</b>
+            </h3>
+          </HexContentContainer>
         </HexBorder>
-        <HexBorder left={1} top={2} color="green">
-          <HexagonContent> Hexagon 2</HexagonContent>
+        <HexBorder
+          top={2}
+          left={3}
+          firstColor="white"
+          secondColor="red"
+          direction="to left"
+        >
+          <HexContentContainer>
+            <Dot color="yellow" />
+            <h3>
+              Antal Kontrollpunkter <b>100</b>
+            </h3>
+          </HexContentContainer>
         </HexBorder>
-        <HexBorder left={3} top={2} color="blue">
-          <HexagonContent> Hexagon 3</HexagonContent>
+        <HexBorder
+          top={3}
+          left={2}
+          firstColor="white"
+          secondColor="red"
+          direction="to left"
+        >
+          <HexContentContainer>
+            <Dot color="green" />
+            <h3>
+              Antal Kontrollpunkter <b>100</b>
+            </h3>
+          </HexContentContainer>
         </HexBorder>
-        <HexBorder left={2} top={3} color="yellow">
-          <HexagonContent> Hexagon 4</HexagonContent>
-        </HexBorder>
-      </HexContainer>
+      </HexGridContainer>
     </div>
   );
 }

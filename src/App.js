@@ -1,8 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar/Navbar";
-import HexGrid from "./components/HexGrid/HexGrid";
-import ModalPopup from "./components/presentation/ModalPopup/ModalPopup";
 
 import styled from "styled-components";
 
@@ -29,8 +27,6 @@ function App() {
           <Route path="about" element="" />
         </Routes>
       </Router>
-      {/* <HexGrid /> */}
-      {/* <ModalPopup /> */}
     </Container>
   );
 }

@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const hexWidth = "280px";
 const hexHeight = "280px";
+const hexagon =
+  "clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)";
 
 const HexSizing = {
   hexWidth: hexWidth,
@@ -29,6 +31,7 @@ export const HexGridContainer = styled.div`
   } */
 `;
 
+// Styling for the hexagon base shape
 const Hexagon = styled.span`
   display: flex;
   align-items: center;
@@ -38,6 +41,7 @@ const Hexagon = styled.span`
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 `;
 
+//Styling for the larger hexagon (border)
 export const HexBorder = styled(Hexagon)`
   /* width: calc(${HexSizing.hexBackgroundWidth} + ${(props) =>
     props.border}); */
@@ -54,6 +58,7 @@ export const HexBorder = styled(Hexagon)`
   /* box-shadow: inset 0 0 0 5rem lightGreen; */
 `;
 
+//Styling for the inner/smaller hexagon where the content is displayed
 export const HexContentContainer = styled(Hexagon)`
   background-color: ${(props) => (props.bg ? props.bg : "white")};
 
@@ -68,3 +73,27 @@ export const Dot = styled.span`
   clip-path: circle(50% at 50% 50%);
   background-color: ${(props) => (props.color ? props.color : "blue")};
 `;
+
+//Inner Outer Hex variations
+const iohex = styled.div`  
+  -webkit-clip-path: ${hexagon}
+  clip-path:  ${hexagon}
+`;
+
+const outside = styled(iohex)`
+  position: relative;
+  width: 70vmin;
+  height: 70vmin;
+  background: tomato;
+`;
+
+const inside = styled(iohex)`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: white;
+`;
+
+const content = styled.div``;

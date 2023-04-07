@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar/Navbar";
-
+import Flyout from "./components/presentation/Flyout/Flyout";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -27,6 +27,7 @@ function App() {
           <Route path="about" element="" />
         </Routes>
       </Router>
+      <Flyout />
     </Container>
   );
 }

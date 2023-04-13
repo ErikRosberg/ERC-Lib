@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar/Navbar";
 import StartPage from "./Pages/StartPage/StartPage";
 import styled from "styled-components";
-import Grid from "./components/features/Grid";
+import Hexagon from "./components/presentation/Hexagon/Hexagon";
 
 const Container = styled.div`
+  display: grid;
+  justify-content: center;
+  align-items: center;
   overflow-y: hidden;
   overflow-x: hidden;
   width: 100vw;
@@ -23,9 +26,10 @@ function App() {
           <Route path="contact" element="" />
           <Route path="about" element="" />
         </Routes>
-        <StartPage />
-      </Router> */}
-      <Grid />
+      </Router>
+      <StartPage /> */}
+      {/* <Hexagon Label="red" amount="100" firstColor="red" secondColor="yellow" /> */}
+      <Hexagon />
     </Container>
   );
 }

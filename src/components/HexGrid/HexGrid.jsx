@@ -5,6 +5,7 @@ import {
   HexContentContainer,
   Dot,
 } from "./HexGrid.style";
+import Flyout from "../presentation/Flyout/Flyout";
 
 function HexGrid(className, Label) {
   return (
@@ -25,12 +26,14 @@ function HexGrid(className, Label) {
           secondColor="yellow"
           direction="to left"
         >
-          <HexContentContainer>
-            <Dot color="blue" />
-            <h3>
-              Antal Kontrollpunkter <b>100</b>
-            </h3>
-          </HexContentContainer>
+          <Flyout>
+            <HexContentContainer>
+              <Dot color="blue" />
+              <h3>
+                Antal Kontrollpunkter <b>100</b>
+              </h3>
+            </HexContentContainer>
+          </Flyout>
         </HexBorder>
         <HexBorder
           top={2}
@@ -41,9 +44,11 @@ function HexGrid(className, Label) {
         >
           <HexContentContainer>
             <Dot color="red" />
-            <h3>
-              Antal Kontrollpunkter <b>100</b>
-            </h3>
+            <Flyout>
+              <h3>
+                Antal Kontrollpunkter <b>100</b>
+              </h3>
+            </Flyout>
           </HexContentContainer>
         </HexBorder>
         <HexBorder

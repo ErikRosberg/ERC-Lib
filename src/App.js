@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar/Navbar";
 import StartPage from "./Pages/StartPage/StartPage";
 import styled from "styled-components";
-// import HexGridLayout from "./components/presentation/HexGridLayout/HexGridLayout";
 import Grid from "./components/Grid/Grid";
 
 const Container = styled.div`

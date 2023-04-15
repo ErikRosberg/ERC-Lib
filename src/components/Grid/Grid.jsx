@@ -5,11 +5,17 @@ import Hexagon from "../presentation/Hexagon/Hexagon";
 
 const GridLayout = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-template-rows: repeat(auto-fit, 3, 1fr);
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
   background-color: #2196f3;
-  grid-row-gap: 0;
-  grid-column-gap: 0;
+  /* grid-row-gap: 0;
+  grid-column-gap: 0; */
+  /* justify-content: center; */
+
+  /* padding: 2rem; */
   border: 1px solid red;
 
   @media only screen and (max-width: 515px) {

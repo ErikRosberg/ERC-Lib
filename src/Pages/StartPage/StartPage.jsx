@@ -1,6 +1,6 @@
 import React from "react";
 import HexGrid from "../../components/HexGrid/HexGrid";
-import Grid from "../../components/features/Grid";
+import Grid from "../../components/Grid/Grid";
 import {
   Container,
   Content,
@@ -24,7 +24,7 @@ function StartPage() {
       </ListContainer>
       <StatContainer>
         {/* <HexGrid /> */}
-        <Grid/>
+        <Grid />
       </StatContainer>
     </Container>
   );

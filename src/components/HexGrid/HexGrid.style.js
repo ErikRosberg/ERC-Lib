@@ -17,8 +17,8 @@ const HexSizing = {
 
 export const HexGridContainer = styled.div`
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, 3, 1fr); */
-  grid-template-columns: repeat (auto-fit, minmax(0, max-content));
+  grid-template-columns: repeat(auto-fit, 3, 1fr);
+  /* grid-template-columns: repeat (auto-fit, minmax(0, max-content)); */
   grid-template-rows: repeat(auto-fit, 3, 1fr);
 
   /* display: grid;
@@ -81,27 +81,3 @@ export const Dot = styled.span`
   clip-path: circle(50% at 50% 50%);
   background-color: ${(props) => (props.color ? props.color : "blue")};
 `;
-
-//Inner Outer Hex variations
-const iohex = styled.div`  
-  -webkit-clip-path: ${hexagon}
-  clip-path:  ${hexagon}
-`;
-
-const outside = styled(iohex)`
-  position: relative;
-  width: 70vmin;
-  height: 70vmin;
-  background: tomato;
-`;
-
-const inside = styled(iohex)`
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background: white;
-`;
-
-const content = styled.div``;

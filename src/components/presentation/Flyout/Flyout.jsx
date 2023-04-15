@@ -83,7 +83,7 @@ function Flyout({ toolTip, children }) {
   return (
     <span
       onClick={() => setIsClicked(!isClicked)}
-      style={{ position: "relative", backgroundColor: "blue" }}
+      style={{ position: "relative" }}
     >
       {(isClicked || hover) && (
         <Card

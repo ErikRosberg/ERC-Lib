@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar/Navbar";
 import StartPage from "./Pages/StartPage/StartPage";
 import styled from "styled-components";
-import Hexagon from "./components/presentation/Hexagon/Hexagon";
+// import HexGridLayout from "./components/presentation/HexGridLayout/HexGridLayout";
+import Grid from "./components/Grid/Grid";
 
 const Container = styled.div`
+  /* background-color: black; */
   display: grid;
   justify-content: center;
   align-items: center;
@@ -28,8 +30,8 @@ function App() {
         </Routes>
       </Router>
       <StartPage /> */}
-      {/* <Hexagon Label="red" amount="100" firstColor="red" secondColor="yellow" /> */}
-      <Hexagon />
+      {/* <Hexagon label="blue" amount="10" firstColor="blue" secondColor="green" /> */}
+      <Grid />
     </Container>
   );
 }

@@ -5,7 +5,7 @@ const theme = {
   DiamondSize: "35%",
 };
 
-const Body = styled.body`
+const Body = styled.div`
   background: #000;
 `;
 

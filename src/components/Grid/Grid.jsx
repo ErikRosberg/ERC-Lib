@@ -5,58 +5,58 @@ import Hexagon from "../presentation/Hexagon/Hexagon";
 
 const GridLayout = styled.div`
   display: grid;
-  grid-template-areas: "top top top" "left mid right" "bottom bottom bottom";
-  grid-template-columns: repeat (200px);
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50%;
-  background-color: blue;
+  grid-template-columns: repeat(auto-fit, 3, 1fr);
+  grid-template-rows: repeat(auto-fit, 3, 1fr);
+  background-color: #2196f3;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  border: 1px solid red;
 
-  > div {
-  }
-
-  .top {
-    height: 100%;
+  @media only screen and (max-width: 515px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
-    border: 1px solid red;
-    grid-area: top;
-  }
-  .left {
-    height: 100%;
-    width: 20rem;
-    border: 1px solid red;
-    grid-area: left;
-  }
-  .right {
-    height: 100%;
-    width: 20rem;
-    border: 1px solid red;
-    grid-area: right;
-  }
-  .bottom {
-    height: 100%;
-    width: 100%;
-    border: 1px solid red;
-    grid-area: bottom;
   }
 `;
 
 function Grid() {
   return (
     <GridLayout>
-      <div className="top">
-        <Hexagon />
-      </div>
-      <div className="left">
-        <Hexagon />
-      </div>
-      <div className="right">
-        <Hexagon />
-      </div>
-      <div className="bottom">
-        <Hexagon />
-      </div>
+      <Hexagon
+        label="kontrollerade"
+        amount="10"
+        firstColor="blue"
+        secondColor="green"
+        column="2"
+        row="1"
+      />
+      <Hexagon
+        label="misslyckade"
+        amount="10"
+        firstColor="red"
+        secondColor="green"
+        column="1"
+        row="2"
+      />
+      <Hexagon
+        label="gjorda"
+        amount="10"
+        firstColor="yellow"
+        secondColor="green"
+        column="3"
+        row="2"
+      />
+      <Hexagon
+        label="uppföljning"
+        amount="10"
+        firstColor="purple"
+        secondColor="green"
+        column="2"
+        row="3"
+      />
     </GridLayout>
   );
 }

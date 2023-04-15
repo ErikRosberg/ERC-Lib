@@ -1,9 +1,10 @@
 import React from "react";
 import { Body, BigDiamond, Diamond, DiamondLink } from "./Grid.Style";
+// import Hexagon from "../presentation/Hexagon/Hexagon";
 
 function Grid() {
   return (
-    <Body>
+    <div>
       <BigDiamond>
         <Diamond>
           <DiamondLink> Text</DiamondLink>
@@ -18,7 +19,7 @@ function Grid() {
           <DiamondLink></DiamondLink>
         </Diamond>
       </BigDiamond>
-    </Body>
+    </div>
   );
 }
 

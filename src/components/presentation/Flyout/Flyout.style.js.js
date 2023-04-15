@@ -5,7 +5,7 @@ export const Card = styled.span`
   z-index: 1;
   min-width: 5rem;
   background-color: red;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   top: 1rem;
   left: 1rem;
   padding: 0.2rem;
@@ -20,6 +20,6 @@ export const Card = styled.span`
     top: -50%;
     left: -50%;
     z-index: -1;
-    border: 1px solid green;
+    /* border: 1px solid green; */
   }
 `;

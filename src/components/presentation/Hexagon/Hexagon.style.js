@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 // Used to controll the Hexagon Sizing in one place'¨
 const hexSize = "150px";
+const maxHexSize = "";
+const minHexSize = "150px";
 const hexBorderSize = "0.5rem";
 const fontSize = "24px";
 
@@ -17,10 +19,13 @@ const Hexagon = styled.span`
   width: ${HexSizing.hexSize};
   height: ${HexSizing.hexSize};
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  margin: 0 auto;
 `;
 
 //Styling for the larger hexagon (border)
 export const HexBorder = styled(Hexagon)`
+  grid-column-start: ${(props) => props.column};
+  grid-row-start: ${(props) => props.row};
   width: ${HexSizing.hexBackgroundSize};
   height: ${HexSizing.hexBackgroundSize};
   padding: ${hexBorderSize};
@@ -35,13 +40,13 @@ export const HexContentContainer = styled(Hexagon)`
   background-color: ${(props) => (props.bg ? props.bg : "white")};
   width: ${hexSize};
   height: ${hexSize};
+  text-align: center;
 
   > h3 {
-    text-align: center;
     font-size: 12px;
   }
+
   > b {
-    text-align: center;
   }
 
   :hover {

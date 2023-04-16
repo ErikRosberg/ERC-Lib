@@ -22,13 +22,13 @@ function Hexagon({
         column={column}
         row={row}
       >
-        {/* <Flyout> */}
-        <HexContentContainer>
-          <Dot color={dotColor || firstColor} />
-          <h3>Antal {label || "label"} Kontrollpunkter </h3>
-          <b> {amount || "100"}</b>
-        </HexContentContainer>
-        {/* </Flyout> */}
+        <Flyout>
+          <HexContentContainer>
+            <Dot color={dotColor || firstColor} />
+            <h3>Antal {label || "label"} Kontrollpunkter </h3>
+            <b> {amount || "amount"}</b>
+          </HexContentContainer>
+        </Flyout>
       </HexBorder>
     </>
   );

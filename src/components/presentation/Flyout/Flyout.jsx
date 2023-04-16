@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card } from "./Flyout.style.js";
+import {container, card, content } from "./Flyout.style.js";
 
 function Flyout({ toolTip, children }) {
   const testData = [
@@ -81,12 +81,12 @@ function Flyout({ toolTip, children }) {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <span
+    <container
       onClick={() => setIsClicked(!isClicked)}
       style={{ position: "relative" }}
     >
       {(isClicked || hover) && (
-        <Card
+        <card
           onMouseEnter={() => setHover(true)}
           onMouseDown={() => {
             if (isClicked) {
@@ -96,10 +96,10 @@ function Flyout({ toolTip, children }) {
           onMouseLeave={() => setHover(false)}
         >
           {renderTestData2(testData, [])}
-        </Card>
+        </card>
       )}
 
-      <span
+      <content
         onMouseEnter={() => setHover(true)}
         onMouseDown={() => {
           if (isClicked) {
@@ -109,9 +109,22 @@ function Flyout({ toolTip, children }) {
         onMouseLeave={() => setHover(false)}
       >
         {children}
-      </span>
-    </span>
+      </content>
+    </container>
   );
 }
 
 export default Flyout;
+
+
+<div id="open-modal" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <h1>Voilà!</h1>
+    <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
+    <br>
+    <div><small>Check out 👇</small></div>
+    <a href="https://chrome.google.com/webstore/detail/chroma/pkgejkfioihnchalojepdkefnpejomgn?utm_campaign=chromapromo&utm_source=codepen.io" target="_blank">
+      Your new favorite eyedropper tool!
+  </div>
+</div>

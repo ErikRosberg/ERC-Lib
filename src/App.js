@@ -29,7 +29,6 @@ function App() {
         </Routes>
       </Router>
       <StartPage /> */}
-      {/* <Hexagon label="blue" amount="10" firstColor="blue" secondColor="green" /> */}
       <Grid />
     </Container>
   );
